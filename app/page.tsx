@@ -1,11 +1,13 @@
 import Image from 'next/image'
+import HoverBoxes from './components/hoverbox'
 
 export default function Home() {
   return (
-      <main className="flex flex-col md:flex-row items-center justify-between p-24 min-h-screen">
-      <div className="md:w-1/2 py-20 px-10 flex flex-col justify-between min-h-[500px]">
-        <div>
-          <h1 className="text-4xl font-bold text-black">Welcome to Techn-AIA</h1>
+    <>
+      <main className="flex flex-col md:flex-row items-center justify-between p-10 min-h-screen">
+      <div className="md:w-1/2 py-20 px-10 flex flex-col justify-between lg:min-h-[800px]">
+        <div className='align-top'>
+          <h1 className="text-4xl font-bold text-black">Welcome to Techn-AI</h1>
           <p className="text-xl mt-4 text-black">We bring cutting-edge technology and AI solutions to your business.</p>
         </div>
         <div>
@@ -26,6 +28,11 @@ export default function Home() {
       <div className="md:w-1/2">
         <Image src="/network_abstract.png" alt="Hero" width={500} height={500} className="w-full h-auto" />
       </div>
+
     </main>
+          <div className="m-8">
+          <HoverBoxes />
+          </div>
+          </>
   )
 }

@@ -17,19 +17,19 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">           
             <Link href="/">
-              <span className="text-white font-bold text-2xl"><img src="/white_logo.svg" alt="Logo" className="inline-block h-12 w-12" />  Techn-AIA</span>
+              <span className="text-white font-bold text-2xl"><img src="/white_logo.svg" alt="Logo" className="inline-block h-12 w-12" />  Techn-AI</span>
             </Link>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link href="/">
-                <span className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</span>
+                <span className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Home</span>
               </Link>
               <Link href="/about">
-                <span className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</span>
+                <span className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-xl font-medium">About</span>
               </Link>
               <Link href="/services">
-                <span className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</span>
+                <span className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Services</span>
               </Link>
             </div>
           </div>
