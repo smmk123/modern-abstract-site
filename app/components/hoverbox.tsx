@@ -22,6 +22,7 @@ const HoverBox: React.FC<HoverBoxProps> = ({ bgColor, defaultText, hoverText }) 
   const handleMouseLeave = () => {
     setHovered(false);
   };
+
   const getAnimationData = () => {
     if (bgColor === 'red') {
       return animationData1;
@@ -46,27 +47,25 @@ const HoverBox: React.FC<HoverBoxProps> = ({ bgColor, defaultText, hoverText }) 
     }
   };
 
-  return (
+  return (<>
+    
     <motion.div
-      className={`w-32 h-32 md:w-[40rem] md:h-[20rem] ${hovered && `bg-${bgColor}-500`} flex justify-center items-end p-5`}
+      className={`w-full h-32 ${hovered && `bg-${bgColor}-500`} flex md:justify-center items-end p-5 border`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       whileHover={{ scale: 1.1, transition: { duration: 2 } }}
-    >
-              <Lottie
-        animationData={getAnimationData()}
-        style={style}
-      />
-      <motion.span className="display:block text-lg font-bold" transition={{ duration: 2 }}>{hovered ? hoverText : defaultText }</motion.span>
+    > <Lottie animationData={getAnimationData()} style={style}/>
+    <motion.span className="sm:text-sm md:text-lg font-bold" transition={{ duration: 2 }}>{hovered ? hoverText : defaultText }</motion.span>
     </motion.div>
+    </>
   );
 };
 
 const HoverBoxes: React.FC = () => {
   return (
-    <div className="flex justify-center items-center lg:flex-row md:flex-col sm:flex-col xs:flex-col md:m-10">
+    <div className="flex justify-center items-center lg:flex-row md:flex-col md:m-10">
       <HoverBox bgColor="red" defaultText="Data Conditioning" hoverText="Techn-AI specializes in data conditioning, providing advanced techniques and solutions to optimize and prepare data for effective analysis and AI applications." />
-      <HoverBox bgColor="green" defaultText="AI Intergration" hoverText="Techn-AIA specializes in seamless AI integration, empowering businesses to leverage cutting-edge artificial intelligence technologies to drive innovation, enhance operational efficiency, and unlock new opportunities for growth." />
+      <HoverBox bgColor="green" defaultText="AI Intergration" hoverText="Techn-AIA specializes in seamless AI integration, empowering businesses to leverage cutting-edge artificial intelligence technologies to drive innovation, and unlock new opportunities for growth." />
       <HoverBox bgColor="purple" defaultText="Model Training" hoverText="At Techn-AIA, we excel in cutting-edge model training, harnessing the power of advanced algorithms and AI techniques to optimize and refine models for superior performance and accuracy." />
     </div>
   );
