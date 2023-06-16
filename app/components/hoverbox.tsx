@@ -50,7 +50,7 @@ const HoverBox: React.FC<HoverBoxProps> = ({ bgColor, defaultText, hoverText }) 
   return (<>
     
     <motion.div
-      className={`w-full h-32 ${hovered && `bg-${bgColor}-500`} flex md:justify-center items-end p-5 border`}
+      className={`w-full h-10rem ${hovered && `bg-${bgColor}-500`} flex md:justify-center items-end p-5`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       whileHover={{ scale: 1.1, transition: { duration: 2 } }}
@@ -63,7 +63,7 @@ const HoverBox: React.FC<HoverBoxProps> = ({ bgColor, defaultText, hoverText }) 
 
 const HoverBoxes: React.FC = () => {
   return (
-    <div className="flex justify-center items-center lg:flex-row md:flex-col md:m-10">
+    <div className="flex justify-center items-center lg:flex-row md:flex-col flex-col md:m-10">
       <HoverBox bgColor="red" defaultText="Data Conditioning" hoverText="Techn-AI specializes in data conditioning, providing advanced techniques and solutions to optimize and prepare data for effective analysis and AI applications." />
       <HoverBox bgColor="green" defaultText="AI Intergration" hoverText="Techn-AIA specializes in seamless AI integration, empowering businesses to leverage cutting-edge artificial intelligence technologies to drive innovation, and unlock new opportunities for growth." />
       <HoverBox bgColor="purple" defaultText="Model Training" hoverText="At Techn-AIA, we excel in cutting-edge model training, harnessing the power of advanced algorithms and AI techniques to optimize and refine models for superior performance and accuracy." />

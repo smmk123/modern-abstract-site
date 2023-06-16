@@ -7,11 +7,11 @@ export default function Home() {
       <main className="flex flex-col md:flex-row items-center justify-between p-10 min-h-screen">
       <div className="md:w-1/2 py-20 px-10 flex flex-col justify-between lg:min-h-[800px]">
         <div className='align-top'>
-          <h1 className="text-4xl font-bold text-black">Welcome to Techn-AI</h1>
-          <p className="text-xl mt-4 text-black">We bring cutting-edge technology and AI solutions to your business.</p>
+          <h1 className="text-4xl font-bold ">Welcome to Techn-AI</h1>
+          <p className="text-xl mt-4 ">We bring cutting-edge technology and AI solutions to your business.</p>
         </div>
         <div>
-          <h2 className="text-2xl font-semibold text-black">Our Services</h2>
+          <h2 className="text-2xl font-semibold ">Our Services</h2>
           <ul className="mt-4">
             <li className="mb-2">
               <span className="text-green-500 mr-2">&bull;</span> Web Development
@@ -32,6 +32,9 @@ export default function Home() {
     </main>
           <div className="m-8">
           <HoverBoxes />
+          </div>
+          <div>
+
           </div>
           </>
   )
