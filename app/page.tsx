@@ -14,7 +14,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold ">Our Services</h2>
           <ul className="mt-4">
             <li className="mb-2">
-              <span className="text-green-500 mr-2">&bull;</span> Web Development
+              <span className="text-green-500 mr-2">&bull;</span> Complex System Intergration
             </li>
             <li className="mb-2">
               <span className="text-green-500 mr-2">&bull;</span> Machine Learning
