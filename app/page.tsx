@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import HoverBoxes from './components/hoverbox'
+import SectionWithOverlay from './components/sectionWithOverlay'
 
 export default function Home() {
   return (
@@ -33,8 +34,8 @@ export default function Home() {
           <div className="m-8">
           <HoverBoxes />
           </div>
-          <div>
-
+          <div className="m-8">
+            <SectionWithOverlay imageSrc={'/office_workers2.png'} upperText={'AI With Humans'} lowerText={'At Techn-AI we believe in a human first approch to AI.'} />
           </div>
           </>
   )
